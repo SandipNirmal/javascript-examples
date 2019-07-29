@@ -122,4 +122,13 @@ const renderCalendar = (year = currentYear, month = currentMonth) => {
 
 // Render calendar
 renderDaysInWeek();
-renderCalendar(2019, 02);
+renderCalendar();
+
+try {
+  module.exports = {
+    getNoOfDayInMonth,
+    isCurrentDate
+  };
+} catch (browser) {
+  console.log('Runnig browser environment.');
+}
